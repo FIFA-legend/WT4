@@ -1,0 +1,14 @@
+CREATE TABLE IF NOT EXISTS user(
+	id INT NOT NULL AUTO_INCREMENT,
+	username VARCHAR(20) NOT NULL,
+	password VARCHAR(128) NOT NULL,
+	role ENUM('admin', 'user') NULL DEFAULT 'user',
+	PRIMARY KEY (`id`)
+);
+
+CREATE TABLE IF NOT EXISTS room(
+	id INT NOT NULL AUTO_INCREMENT,
+	room_number VARCHAR(10) NOT NULL,
+	occupied VARCHAR(5) NOT NULL DEFAULT 'false',
+	PRIMARY KEY (`id`)
+);
